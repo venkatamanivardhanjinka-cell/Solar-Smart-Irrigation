@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Smart Irrigation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Solar Smart Irrigation</h1>
+        <p>Smart farming • Efficient water management</p>
+    </header>
+
+    <h2>Farm Dashboard</h2>
+    <p>Demonstration values — not live sensor readings.</p>
+
+    <section class="dashboard">
+        <div class="card">
+            <h2>🌱 Soil Moisture</h2>
+            <p class="value">29%</p>
+            <p>Sample reading</p>
+        </div>
+
+        <div class="card">
+            <h2>💧 Pump Status</h2>
+            <p class="value" id="pumpStatus">OFF</p>
+            <p>Simulated control</p>
+        </div>
+
+        <div class="card">
+            <h2>☀️ Solar Power</h2>
+            <p class="value">120 W</p>
+            <p>Sample reading</p>
+        </div>
+
+        <div class="card">
+            <h2>🚿 Water Usage</h2>
+            <p class="value">45 L</p>
+            <p>Sample usage</p>
+        </div>
+    </section>
+
+    <section class="controls">
+        <h2>Irrigation Controls</h2>
+
+        <button onclick="setPump(true)">Start Pump (Demo)</button>
+        <button onclick="setPump(false)">Stop Pump (Demo)</button>
+
+        <hr>
+
+        <label for="threshold">
+            Watering threshold: <strong id="thresholdValue">35%</strong>
+        </label>
+
+        <p>
+            <input id="threshold" type="range"
+                   min="15" max="60" value="35">
+        </p>
+
+        <p id="recommendation">
+            Sample moisture is below the threshold. Watering is recommended.
+        </p>
+    </section>
+
+    <footer>
+        Student project demonstration • Sample data only
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
